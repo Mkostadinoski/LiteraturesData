@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::apiResource('literatures', LiteratureController::class);
+
 
 // use Illuminate\Support\Facades\Route;
 
