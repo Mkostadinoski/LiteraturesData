@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LiteratureController;
 
 // Route::apiResource('literatures', LiteratureController::class);
-Route::post('/literatures', [LiteratureController::class, 'store'])
+Route::resource('literatures', LiteratureController::class)
     ->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
 
 // use Illuminate\Support\Facades\Route;
