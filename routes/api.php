@@ -4,7 +4,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PoezijaController;
 use App\Http\Controllers\ProzaController;
-
+use App\Http\Controllers\TekstController;
+Route::apiResource('tekstovi', TekstController::class);
 Route::apiResource('proza', ProzaController::class);
 Route::apiResource('poezija', PoezijaController::class);
 Route::get('/citati', [App\Http\Controllers\CitatiController::class, 'index']);
