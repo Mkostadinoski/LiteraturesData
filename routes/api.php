@@ -2,6 +2,10 @@
 
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PoezijaController;
+
+Route::apiResource('poezija', PoezijaController::class);
+
 
 Route::get('/citati', [App\Http\Controllers\CitatiController::class, 'index']);
 Route::post('/citati', [App\Http\Controllers\CitatiController::class, 'store']);
