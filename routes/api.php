@@ -3,10 +3,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PoezijaController;
+use App\Http\Controllers\ProzaController;
 
+Route::apiResource('proza', ProzaController::class);
 Route::apiResource('poezija', PoezijaController::class);
-
-
 Route::get('/citati', [App\Http\Controllers\CitatiController::class, 'index']);
 Route::post('/citati', [App\Http\Controllers\CitatiController::class, 'store']);
 Route::get('/citati/{citat}', [App\Http\Controllers\CitatiController::class, 'show']);
